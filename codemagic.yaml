@@ -1,0 +1,14 @@
+workflows:
+  android-workflow:
+    name: Build Android APK
+    instance_type: mac_mini_m2
+    environment:
+      android_home: $ANDROID_HOME
+      java_home: $JAVA_HOME_11_X64
+    scripts:
+      - name: Build APK
+        script: |
+          chmod +x gradlew
+          ./gradlew assembleRelease
+    artifacts:
+      - app/build/outputs/apk/release/*.apk
