@@ -3,8 +3,7 @@ workflows:
     name: Build Android APK
     instance_type: mac_mini_m2
     environment:
-      android_home: $ANDROID_HOME
-      java_home: $JAVA_HOME_11_X64
+      java: 17
     scripts:
       - name: Build APK
         script: |
@@ -12,3 +11,4 @@ workflows:
           ./gradlew assembleRelease
     artifacts:
       - app/build/outputs/apk/release/*.apk
+      
