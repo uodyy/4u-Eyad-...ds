@@ -1,0 +1,4 @@
+-keep class com.checker.discord.** { *; }
+-keep class com.google.gson.** { *; }
+-keep class retrofit2.** { *; }
+-keepattributes Signature
